@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  hive-container-push:
+    image: leftstache/hive-container-push
+    labels:
+      com.leftstache.hive.type: "container-push"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - ADVERTISE_NAME
+      - ZK_HOSTS
+      - ZK_BASE
